@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        section.experience-section {
+            background-color: #bebebe; /* Light background for the section */
+            margin-bottom: 2em;
+            padding: 1em;
+            border-left: 4px solid orange; /* Accent color on the left */
+        }
+
+        .position-title {
+            font-weight: bold;
+            color: #0056b3; /* Darker blue for the title for contrast */
+            margin-bottom: 0.5em;
+        }
+
+        .experience-description {
+            margin-bottom: 1em;
+        }
+
+        .experience-link {
+          display: block;
+          text-decoration: none;
+          color: black;
+          cursor: pointer;
+        }
+
+        .social-links a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: #0056b3;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+
+        .experience-section a,
+        .experience-section a:visited,
+        .experience-section a:hover,
+        .experience-section .position-title,
+        .experience-section p {
+            color: black !important;
+        }
+        /* Add more CSS here as needed */
+    </style>
+</head>
+<body>
+    <header>
+      <nav>
+        <ul>
+            <li><a href="../index.html" style="margin-right: 10px;">About Me</a></li>
+            <li><a href="author.html" style="margin-right: 10px;">Experience</a></li>
+            <li><a href="project.html" class="active">Projects</a></li>
+        </ul>
+    </nav>
+    </header>
+    <main>
+        <h1>Projects</h1>
+        
+        <!-- Example Project Section -->
+        <section class="experience-section" data-date="Nov 2023 - Dec 2023">
+            <a href="https://github.com/ktalluri456/educationhackathon" target="_blank" class="experience-link">
+              <p class="position-title">EduPlanIt</p>
+              <div class="experience-description">
+                  <p>EduPlanIt is a dynamic model designed to gauge students' current interests. Utilizing the capabilities of the Google Palm2 API, our model interprets inputs—whether they're bullet points, sentences, or paragraphs—into a skill set that the LLM can comprehend. For enhanced accuracy, we've aggregated matching qualities from various online sources for 21 distinct job titles and have trained the Palm2 API using Makersuite.</p>
+                  <p>Computer Science Tools: Python (Palm2, Google API, Flask), HTML, CSS, JavaScript, Amazon Web Services (EC2, IAM), Large Language Models</p>
+                  <p>Product Management Tools: Git</p>
+              </div>
+            </a>
+        </section>
+
+        <section class="experience-section" data-date="Dec 2021 - Jan 2023">
+          <a href="https://github.com/ktalluri456/SearchEngine" target="_blank" class="experience-link">
+            <p class="position-title">Primitive Search Engine</p>
+            <div class="experience-description">
+                <p>I developed a search engine with a front-end interface using a Flask framework frontend and a Python backend. By leveraging data-based APIs like 
+                    Pandas, I was able to clean and organize the data into something that could be parsed. I used the Whoosh API to create a parser for 
+                    a data file of 10 GB and produces the results of the top 5 articles. This behavior is a mimic of Google Scholar Engine. </p>
+                <p>Computer Science Tools: Python (Whoosh, Flask, Pandas, NumPy)</p>
+                <p>Data Storage Tools: JSON</p>
+                <p>Product Management Tools: Git</p>
+            </div>
+          </a>
+        </section>
+
+        <section class="experience-section" data-date="April 2022 - May 2022">
+            <a href="https://github.com/ktalluri456/FGSMAttack" target="_blank" class="experience-link">
+              <p class="position-title">Hacking Simulation</p>
+              <div class="experience-description">
+                  <p>This project demonstrates how we can use the Fast Gradient Sign Method (FGSM) to destroy a neural network's ability to classify images, otherwise known as an adversarial attack. </p>
+                  <p>Computer Science Tools: Python (TensorFlow, Torch, NumPy, Matplotlib), Jupyter Notebook</p>
+                  <p>Product Management Tools: Git</p>
+              </div>
+            </a>
+        </section>
+
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/karthiktalluri1/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/ktalluri456" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karthik Talluri - Portfolio</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/karthiktalluri1/" target="_blank">
+                <i class="fab fa-linkedin"></i> 
+            </a>
+            <a href="https://github.com/ktalluri456" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active" style="margin-right: 10px;">About Me</a></li>
+                <li><a href="pages/author.html" style="margin-right: 10px;">Experience</a></li>
+                <li><a href="pages/project.html">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>About Me</h1>
+            <img src="assets/images/headshot.png" alt="Karthik Talluri" style="max-width: 200px; height: auto; border-radius: 50%;">
+        </section>
+        <section id="about" class="about-section">
+            <p>
+                <p>I am a current graduate student at Carnegie Mellon University, pursuing a degree in Business Analytics with a focus in Data Science and ML. <a href="https://www.cmu.edu/tepper/programs/master-business-analytics/full-time/index.html" target="_blank">Learn more about the CMU MSBA program that I am pursuing.</a></p>
+                <p>I recently graduated from the University of Illinois at Urbana-Champaign in Computer Engineering. <a href="https://grainger.illinois.edu/academics/undergraduate/majors-and-minors/computer-engineering" target="_blank">Explore the UIUC Computer Engineering curriculum.</a></p>
+                <p>I am currently looking for software engineering, data scientist, and/or product management roles in the industry. I have no preference on the size of the company and believe I can make an impact regardless of the situation I am dealt with. I thrive in ambiguous situations and a collaborative environment, as I enjoy a balance between teamwork and individual contributions. If this is an interesting proposition for you, please reach back using the contact form at the bottom.</p>
+            </p>
+        </section> 
+        <section id="geography" class="about-section">
+            <div class="content-wrapper">
+                <div class="text-content">
+                    <h2>Geographical Background</h2>
+                    <p>I was born in the San Francisco Bay Area, near the South Bay. I grew up my entire life there, but I also spent a significant amount of time in Chicago.</p>
+                    <p>I have traveled extensively around the United States, having visited over 25 states through a combination of road trips and single visits!</p>
+                </div>
+                <div class="image-content">
+                    <img src="assets/images/gif1.gif" alt="Description of GIF">
+                </div>
+            </div>
+        </section>
+        <section id="personal-mission" class="mission-section">
+            <h2>Personal Mission</h2>
+            <p>I am looking to make the strongest possible impact in any project, team, organization, and company I work for. I enjoy high-stakes projects where I can use a combination of decision-making and collaboration. With a combination of my technical and business skills, I can impact a variety of projects in a significant way.</p>
+        </section>
+        <section id="awards" class="about-section">
+            <h2>Accomplishments and Awards</h2>
+            <ul class="hobby-list">
+                <li class="hobby-item">
+                    Carnegie Mellon University Merit Scholar
+                </li>
+                <li class="hobby-item">
+                    University of Illinois Dean's List Spring 2023
+                </li>
+                <li class="hobby-item">
+                    University of Illinois Dean's List Fall 2022
+                </li>
+                <li class="hobby-item">
+                    President's Gold Volunteer Service Award
+                </li>
+            </ul>
+        </section>
+        <section id="hobbies" class="about-section">
+            <h2>Hobbies</h2>
+            <ul class="hobby-list">
+                <li class="hobby-item">
+                    <img src="assets/images/tabletennis.gif" alt="Table Tennis Icon"> Table Tennis
+                </li>
+                <li class="hobby-item">
+                    <img src="assets/images/basketball.gif" alt="Basketball Icon"> Basketball
+                </li>
+                <li class="hobby-item">
+                    <img src="assets/images/world.gif" alt="Geography Icon"> Geography
+                </li>
+            </ul>
+        </section>
+        <section id="contact" class="contact-section">
+            <h2>Contact Me Here!</h2>
+            <form action="https://formspree.io/f/xqkvvdqn" method="POST">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Description:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>            
+        </section>              
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const elementsToAnimate = document.querySelectorAll('.hobby-item, .mission-section');
+
+            const isInViewport = el => {
+                const rect = el.getBoundingClientRect();
+                return (
+                    rect.bottom >= 0 &&
+                    rect.right >= 0 &&
+                    rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.left <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            };
+
+            const runOnScroll = () => {
+                elementsToAnimate.forEach(item => {
+                    if (isInViewport(item) && !item.classList.contains('in-view')) {
+                        setTimeout(() => {
+                            item.classList.add('in-view');
+                        }, 500); // Delay of 500 milliseconds
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', runOnScroll);
+        });
+    </script>
+</body>
+</html>
